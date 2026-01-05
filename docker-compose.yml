@@ -1,0 +1,15 @@
+services:
+  nfs:
+     build: . 
+     privileged: true
+     ports:
+       - "2049:2049"
+     cap_add:
+       - SYS_ADMIN
+       - SETPCAP
+     environment:
+       - "SHARED_DIRECTORY=/shared"
+     volumes:
+       - /srv/nfs_samba:/shared
+     restart: always
+

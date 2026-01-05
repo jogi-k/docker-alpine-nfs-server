@@ -1,6 +1,6 @@
 FROM alpine:3.23.2
 ENV container docker
-LABEL maintainer="Amin Vakil <info@aminvakil.com>"
+LABEL maintainer="Jogi Kuenstner <jogi@kuenstner.ch>"
 
 #hadolint ignore=DL3018
 RUN apk add --no-cache nfs-utils bash && \
